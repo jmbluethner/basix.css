@@ -7,24 +7,10 @@
 * 12/29/2014
 */
 
+:root {
+  --link: #1EAEDB;
 
-/* Table of contents
-––––––––––––––––––––––––––––––––––––––––––––––––––
-- Grid
-- Base Styles
-- Typography
-- Links
-- Buttons
-- Forms
-- Lists
-- Code
-- Tables
-- Spacing
-- Utilities
-- Clearing
-- Media Queries
-*/
-
+}
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -124,7 +110,7 @@
     font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
     line-height: 1.6;
     font-weight: 400;
-    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Montserrat","Raleway", "HelveticaNeue", "Helvetica Neue", sans-serif, Helvetica, Arial, sans-serif;
     color: #222; }
   
   
@@ -158,9 +144,9 @@
   /* Links
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   a {
-    color: #1EAEDB; }
+    color: var(--link) }
   a:hover {
-    color: #0FA0CE; }
+    color: var(--link) }
   
   
   /* Buttons
@@ -186,7 +172,8 @@
     border-radius: 4px;
     border: 1px solid #bbb;
     cursor: pointer;
-    box-sizing: border-box; }
+    box-sizing: border-box; 
+  }
   .button:hover,
   button:hover,
   input[type="submit"]:hover,
@@ -199,7 +186,8 @@
   input[type="button"]:focus {
     color: #333;
     border-color: #888;
-    outline: 0; }
+    outline: 0; 
+  }
   .button.button-primary,
   button.button-primary,
   input[type="submit"].button-primary,
@@ -207,7 +195,10 @@
   input[type="button"].button-primary {
     color: #FFF;
     background-color: #33C3F0;
-    border-color: #33C3F0; }
+    border-color: #33C3F0; 
+    border: 1px solid;
+    transition: .2s ease;
+  }
   .button.button-primary:hover,
   button.button-primary:hover,
   input[type="submit"].button-primary:hover,
@@ -219,8 +210,9 @@
   input[type="reset"].button-primary:focus,
   input[type="button"].button-primary:focus {
     color: #FFF;
-    background-color: #1EAEDB;
-    border-color: #1EAEDB; }
+    background-color: transparent;
+    border-color: #33C3F0; 
+  }
   
   
   /* Forms
@@ -240,7 +232,8 @@
     border: 1px solid #D1D1D1;
     border-radius: 4px;
     box-shadow: none;
-    box-sizing: border-box; }
+    box-sizing: border-box; 
+  }
   /* Removes awkward default styles on some inputs for iOS */
   input[type="email"],
   input[type="number"],
@@ -252,7 +245,8 @@
   textarea {
     -webkit-appearance: none;
        -moz-appearance: none;
-            appearance: none; }
+            appearance: none; 
+  }
   textarea {
     min-height: 65px;
     padding-top: 6px;
@@ -267,41 +261,51 @@
   textarea:focus,
   select:focus {
     border: 1px solid #33C3F0;
-    outline: 0; }
+    outline: 0; 
+  }
   label,
   legend {
     display: block;
     margin-bottom: .5rem;
-    font-weight: 600; }
+    font-weight: 600; 
+  }
   fieldset {
     padding: 0;
-    border-width: 0; }
+    border-width: 0; 
+  }
   input[type="checkbox"],
   input[type="radio"] {
-    display: inline; }
+    display: inline; 
+  }
   label > .label-body {
     display: inline-block;
     margin-left: .5rem;
-    font-weight: normal; }
+    font-weight: normal; 
+  }
   
   
   /* Lists
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   ul {
-    list-style: circle inside; }
+    list-style: circle inside; 
+  }
   ol {
-    list-style: decimal inside; }
+    list-style: decimal inside; 
+  }
   ol, ul {
     padding-left: 0;
-    margin-top: 0; }
+    margin-top: 0; 
+  }
   ul ul,
   ul ol,
   ol ol,
   ol ul {
     margin: 1.5rem 0 1.5rem 3rem;
-    font-size: 90%; }
+    font-size: 90%; 
+  }
   li {
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem; 
+  }
   
   
   /* Code
@@ -313,11 +317,13 @@
     white-space: nowrap;
     background: #F1F1F1;
     border: 1px solid #E1E1E1;
-    border-radius: 4px; }
+    border-radius: 4px; 
+  }
   pre > code {
     display: block;
     padding: 1rem 1.5rem;
-    white-space: pre; }
+    white-space: pre; 
+  }
   
   
   /* Tables
@@ -326,25 +332,30 @@
   td {
     padding: 12px 15px;
     text-align: left;
-    border-bottom: 1px solid #E1E1E1; }
+    border-bottom: 1px solid #E1E1E1; 
+  }
   th:first-child,
   td:first-child {
-    padding-left: 0; }
+    padding-left: 0; 
+  }
   th:last-child,
   td:last-child {
-    padding-right: 0; }
+    padding-right: 0; 
+  }
   
   
   /* Spacing
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   button,
   .button {
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem; 
+  }
   input,
   textarea,
   select,
   fieldset {
-    margin-bottom: 1.5rem; }
+    margin-bottom: 1.5rem; 
+  }
   pre,
   blockquote,
   dl,
@@ -354,21 +365,26 @@
   ul,
   ol,
   form {
-    margin-bottom: 2.5rem; }
+    margin-bottom: 2.5rem; 
+  }
   
   
   /* Utilities
   –––––––––––––––––––––––––––––––––––––––––––––––––– */
   .u-full-width {
     width: 100%;
-    box-sizing: border-box; }
+    box-sizing: border-box; 
+  }
   .u-max-full-width {
     max-width: 100%;
-    box-sizing: border-box; }
+    box-sizing: border-box; 
+  }
   .u-pull-right {
-    float: right; }
+    float: right; 
+  }
   .u-pull-left {
-    float: left; }
+    float: left; 
+  }
   
   
   /* Misc
@@ -377,7 +393,8 @@
     margin-top: 3rem;
     margin-bottom: 3.5rem;
     border-width: 0;
-    border-top: 1px solid #E1E1E1; }
+    border-top: 1px solid #E1E1E1; 
+  }
   
   
   /* Clearing
@@ -389,7 +406,8 @@
   .u-cf {
     content: "";
     display: table;
-    clear: both; }
+    clear: both; 
+  }
   
   
   /* Media Queries
